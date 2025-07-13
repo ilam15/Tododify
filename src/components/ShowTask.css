@@ -14,41 +14,79 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: linear-gradient(90deg, #e3f0ff 0%, #f0f7ff 100%);
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 2px 12px #0f6af322;
 }
 
 .showTask div.head div{
-  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 
 .showTask .title{
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1363DF;
+  letter-spacing: 1px;
   user-select: none;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  margin-right: 10px;
 }
 
-.showTask .count{
+/* .showTask .count{
   background-color: #dfdfdf;
-  color: #525252;
+  color: #0f6af3;
   padding: 5px 10px;
   border-radius: 50%;
   margin-left: 10px;
   user-select: none;
+} */
+ .showTask .count {
+  background-color: #dfdfdf;
+  color: #525252;
+  padding: 7px 14px;
+  border-radius: 50%;
+  margin-left: 0;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px #0f6af322;
+  user-select: none;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.showTask .count:hover {
+  background-color: #0f6af3;
+  color: #fff;
+  transform: scale(1.15);
+}
+
 
 .showTask .clearAll{
   background-color: #0f6af3;
   color: #FFFFFF;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 7px 18px;
+  border-radius: 6px;
   cursor: pointer;
-  border: 0px;
+  border: none;
   font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px #0f6af322;
+  margin-left: 20px;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  outline: none;
+  display: inline-flex; 
   justify-content: space-between;
   float:right;
 }
 
 .showTask .clearAll:hover{
   background-color: #1061db;
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px #0f6af322;
 }
 
 .showTask ul{
