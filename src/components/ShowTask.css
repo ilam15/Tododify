@@ -1,4 +1,3 @@
-
 .showTask{
   padding: 20px 15px;
   border-radius: 5px;
@@ -61,24 +60,14 @@
   align-items: center;
   gap: 15px;
 }
-
-/* .showTask li{
-  padding: 15px 10px;
-  border-bottom: 1px solid #e5e5e5;
-  display: flex;
-  gap: 5px;
-  width: 350px;
-  box-shadow: var(--box-shadow);
-  border-radius: 5px;
-  border-left: 5px solid #1365dfaf;
-} */
+/* 
 .showTask li {
   padding: 15px 10px;
   border-bottom: 1px solid #e5e5e5;
   display: flex;
   gap: 5px;
-  width: 100%; /* Increased width */
-  max-width: 650px; /* Optional: limit max width */
+  width: 100%; 
+  max-width: 650px;
   box-shadow: var(--box-shadow);
   border-radius: 5px;
   border-left: 5px solid #1365dfaf;
@@ -120,4 +109,83 @@
   .showTask li{
     width: 100%;
   }
+} */
+
+.showTask li {
+  padding: 18px 18px;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 2px 12px #0f6af322;
+  border-radius: 10px;
+  border-left: 6px solid #1365dfaf;
+  background: linear-gradient(90deg, #f0f7ff 0%, #e3f0ff 100%);
+  transition: box-shadow 0.2s, transform 0.2s, background 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.showTask li:hover {
+  background: linear-gradient(90deg, #e3f0ff 0%, #f0f7ff 100%);
+  box-shadow: 0 4px 24px #1365dfaf;
+  transform: translateY(-2px) scale(1.01);
+}
+
+.showTask li p {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.showTask li .name {
+  font-size: 19px;
+  font-weight: 600;
+  color: #1363DF;
+  padding-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+.showTask li .time {
+  font-size: 13px;
+  color: #737373;
+  font-style: italic;
+}
+
+.showTask i.bi-pencil-square,
+.showTask i.bi-trash {
+  font-size: 20px;
+  margin-left: 10px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.showTask i.bi-pencil-square:hover {
+  color: #0f6af3;
+  transform: scale(1.2) rotate(-8deg);
+}
+
+.showTask i.bi-trash:hover {
+  color: #D82148;
+  transform: scale(1.2) rotate(8deg);
+}
+
+/* Add a subtle highlight bar on the left when hovered */
+.showTask li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: #1365dfaf;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 10px 0 0 10px;
+}
+
+.showTask li:hover::before {
+  opacity: 0.5;
 }
