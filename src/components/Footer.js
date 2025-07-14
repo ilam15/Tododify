@@ -5,7 +5,7 @@ export const Footer = () => {
     <footer>
       <p>
         <span className="footer-icon">©</span> 2025&nbsp;
-        <a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer" className="footer-link">
+        <a href="https://tododify15.netlify.app/" target="_blank" rel="noopener noreferrer" className="footer-link">
           Tododify
         </a>
       </p>
